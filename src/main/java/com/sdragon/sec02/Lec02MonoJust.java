@@ -1,17 +1,18 @@
 package com.sdragon.sec02;
 
 import com.sdragon.sec01.subscriber.SubscriberImpl;
-import org.reactivestreams.Publisher;
-import org.reactivestreams.Subscriber;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import reactor.core.publisher.Mono;
 
-public class MonoJust {
+public class Lec02MonoJust {
 
-    private static final Logger log = LoggerFactory.getLogger(MonoJust.class);
+    private static final Logger log = LoggerFactory.getLogger(Lec02MonoJust.class);
+
+    // Mono.just: Generates a value immediately. The value must already exist when creating Mono.
 
     public static void main(String[] args) {
+
         // easy to make publisher. It doesn't give the actual value.
         // Till then we will not be getting the value from the publisher. we have to subscribe.
         var mono = Mono.just("vins");
