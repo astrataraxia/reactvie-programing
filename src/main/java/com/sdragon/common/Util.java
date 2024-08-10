@@ -18,12 +18,6 @@ public class Util {
         return new DefaultSubscriber<>(name);
     }
 
-    public static void main(String[] args) {
-        var mono = Mono.just(1);
-        mono.subscribe(subscriber("sub1"));
-        mono.subscribe(subscriber("sub2"));
-    }
-
     public static Faker faker() {
         return faker;
     }
