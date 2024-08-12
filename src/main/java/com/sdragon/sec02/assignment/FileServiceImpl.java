@@ -1,4 +1,4 @@
-package com.sdragon.assignment;
+package com.sdragon.sec02.assignment;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
