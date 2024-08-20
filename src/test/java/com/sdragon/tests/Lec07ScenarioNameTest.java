@@ -1,0 +1,30 @@
+package com.sdragon.tests;
+
+import com.sdragon.common.Util;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import reactor.core.publisher.Flux;
+import reactor.test.StepVerifier;
+import reactor.test.StepVerifierOptions;
+
+public class Lec07ScenarioNameTest {
+
+
+    private Flux<Integer> getItems() {
+        return Flux.range(1, 3);
+    }
+
+    @Test
+    @DisplayName("how to useful Scenario name ")
+    public void rangeTest1() {
+        //You can add an explanation in the test
+        var options = StepVerifierOptions.create().scenarioName("1 to 3 items test");
+
+        StepVerifier.create(getItems(), options)
+                .expectNext(1)
+                .as("first item should be 1")
+                .expectNext(2,3)
+                .as("then 2 and 3")
+                .verifyComplete();
+    }
+}

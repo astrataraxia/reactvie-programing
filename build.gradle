@@ -23,6 +23,7 @@ dependencies {
     implementation "io.projectreactor:reactor-core"
     implementation "io.projectreactor.netty:reactor-netty-core"
     implementation "io.projectreactor.netty:reactor-netty-http"
+    testImplementation "io.projectreactor:reactor-test"
 
 
     implementation "com.github.javafaker:javafaker:$fakerVersion"
@@ -31,7 +32,6 @@ dependencies {
 
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
-    testImplementation "io.projectreactor:reactor-test"
 }
 
 test {
